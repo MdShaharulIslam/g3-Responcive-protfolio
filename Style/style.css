@@ -3,7 +3,11 @@
 * {
   font-family: "Work Sans", sans-serif;
 }
-
+.section-title {
+  color: #131313;
+  font-size: 34px;
+  font-weight: 700;
+}
 
 .header {
   background: rgba(255, 144, 14, 0.1);
@@ -14,11 +18,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-.nav-title {
-  color: #131313;
-  font-size: 34px;
-  font-weight: 700;
-}
+
 nav > ul {
   display: flex;
 }
@@ -106,7 +106,35 @@ main {
   width: 537px;
   color: #727272;
 }
+/* Fact Section */
+.fact-contauner {
+  margin-left: 10px;
+}
 
+.fact-card-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.card {
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+}
+.card:hover {
+  transform: rotate(90deg);
+}
+.card-title{font-size: 45px;
+color: #424242;}
+
+.card-discription{
+    font-weight: 600;
+    color: #727272;
+    font-size: 20px;
+}
 
 
 
@@ -116,33 +144,46 @@ main {
 
 /* responsive styles mobile device*/
 @media screen and (max-width: 576px) {
-    .header {
-      padding: 20px;
-    }
-    nav, .team {
-      flex-direction: column;
-    }
-    nav ul {
-      flex-direction: column;
-    }
-    .team-img-container {grid-template-columns: 1fr;}
-    .team-contant{margin-left: 150px;}
+  .header {
+    padding: 20px;
+  }
+  nav,
+  .team {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  /* .banner-title{font-weight: 400;} */
+  .team-img-container {
+    grid-template-columns: 1fr;
+  }
+  .team-contant {
+    margin-left: 10px;
+  }
+  .team-contant-discription {
+    width: 200px;
+  }
+  .team-contant-title {
+    width: 200px;
+  }
+}
+/* medium device */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  .header {
+    padding: 50px;
+  }
+  nav,
+  .team {
+    flex-direction: column;
+  }
+  .team-img-container {
+    grid-template-columns: 1fr;
+  }
+}
 
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .team {
+    flex-direction: column;
   }
-  /* medium device */
-  @media screen and (min-width:576px) and (max-width: 960px) {
-    .header {
-      padding: 50px;
-    }
-    nav, .team {
-      flex-direction: column;
-    }
-    .team-img-container {grid-template-columns: 1fr;}
-    .team-contant{margin-left: 150px;}
-  }
-  
-  @media screen and (min-width:960px) and (max-width: 1200px){
-    .team {
-        flex-direction: column;}
-
-  }
+}
